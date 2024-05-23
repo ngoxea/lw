@@ -50,6 +50,7 @@ class CustomButton extends StatelessWidget {
           ),
           if (backgroundAsset.isNotEmpty)
           ClipRRect(
+            borderRadius: BorderRadius.circular(borderRadius ?? Dimensions.radiusSmall),
             child: SvgPicture.asset(
               backgroundAsset, 
               fit: BoxFit.cover,

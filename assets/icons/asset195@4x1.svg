@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 73.34 11.65">
   <defs>
-    <style>
-      .cls-1 {
-        fill: url(#linear-gradient);
-        stroke-width: 0px;
-      }
-    </style>
     <linearGradient id="linear-gradient" x1="0" y1="5.83" x2="73.34" y2="5.83" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#00285a"/>
       <stop offset="1" stop-color="#0077b5"/>
     </linearGradient>
   </defs>
   <g id="OBJECTS">
-    <rect class="cls-1" width="73.34" height="11.65" rx="1.75" ry="1.75"/>
+    <rect style="fill: url(#linear-gradient); stroke-width: 0px;" width="73.34" height="11.65" rx="1.75" ry="1.75"/>
   </g>
 </svg>

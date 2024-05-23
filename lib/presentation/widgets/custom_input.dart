@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:lw/utils/color_palette.dart';
 import 'package:lw/utils/dimensions.dart';
 import 'package:lw/utils/text_styles.dart';
@@ -15,9 +17,11 @@ class CustomInput extends StatelessWidget {
   final double? width;
   final double? height;
 
+  final bool suffixIcon;
+
   const CustomInput({
     super.key,
-    this.hintText = 'Outline input',
+    this.hintText = 'Custom input',
     this.hintStyle,
     this.textAlign,
     this.borderColor,
@@ -25,6 +29,7 @@ class CustomInput extends StatelessWidget {
     this.padding,
     this.width,
     this.height,
+    this.suffixIcon = false,
   });
 
   @override
@@ -51,6 +56,17 @@ class CustomInput extends StatelessWidget {
             horizontal: Dimensions.heightMedium,
             vertical: Dimensions.heightSmall,
           ),
+          suffixIconConstraints: BoxConstraints(maxWidth: 40.w, maxHeight: 24.h),
+          suffixIcon: suffixIcon 
+          ? Padding(
+            padding: EdgeInsets.only(right: 16.w),
+            child: SvgPicture.asset(
+              'assets/icons/asset197@4x1.svg', 
+              width: 24.w,
+              height: 24.h,
+            ),
+          )
+          : null,
         ),
       ),
     );
