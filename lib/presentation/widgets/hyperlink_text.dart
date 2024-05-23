@@ -23,7 +23,7 @@ class HyperlinkText extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () { 
-        print('Tap Hyperlink: $hintText'); 
+        print('Tap HyperlinkText: $hintText'); 
         if (Routes.getRoutes().containsKey(routeName)) {
           Navigator.pushNamed(context, routeName);
         }

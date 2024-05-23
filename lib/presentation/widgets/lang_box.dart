@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:lw/utils/dimensions.dart';
 
 class LangBox extends StatelessWidget {
   const LangBox({super.key});
@@ -13,19 +14,17 @@ class LangBox extends StatelessWidget {
           onTap: () { print('Tap LangBox!'); },
           child: SvgPicture.asset(
             'assets/icons/asset160@4x1.svg',
-            fit: BoxFit.cover,
-            width: 35.w,
+            width: Dimensions.heightIconSmall,
             height: 22.h,
           ),
         ),
-        SizedBox(width: 10.w),
+        SizedBox(width: Dimensions.widthBetweenIcon),
         InkWell(
           onTap: () { print('Tap LangBox!'); },
           child: SvgPicture.asset(
             'assets/icons/asset161@4x1.svg',
-            fit: BoxFit.cover,
-            width: 35.w,
-            height: 20.h,
+            width: Dimensions.heightIconSmall,
+            height: Dimensions.heightIconSmall,
           ),
         ),
       ],

@@ -43,4 +43,9 @@ class TextStyles {
     color: ColorPalette.neutralWhiteColor,
     fontSize: 42.sp,
   );
+
+  static final whiteNavigation = baseRoboto.copyWith(
+    color: ColorPalette.neutralWhiteColor,
+    fontSize: 12.sp,
+  );
 }

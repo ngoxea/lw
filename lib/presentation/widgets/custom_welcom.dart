@@ -13,6 +13,7 @@ class CustomWelcome extends StatelessWidget {
 
   final Widget? toolWidget;
   final Widget? textWidget;
+  final Widget? menuWidget;
 
   const CustomWelcome({
     super.key, 
@@ -23,6 +24,7 @@ class CustomWelcome extends StatelessWidget {
     this.logoHeight,
     this.toolWidget,
     this.textWidget,
+    this.menuWidget,
   });
 
   @override
@@ -71,6 +73,7 @@ class CustomWelcome extends StatelessWidget {
           ),
           if (null != toolWidget) toolWidget!,
           if (null != textWidget) textWidget!,
+          if (null != menuWidget) menuWidget!,
         ],
       ),
     );
