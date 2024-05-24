@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15.8 15.8">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0" y1="7.9" x2="15.8" y2="7.9" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#425aa1"/>
+      <stop offset="1" stop-color="#839ec9"/>
+    </linearGradient>
+  </defs>
+  <g id="OBJECTS">
+    <g>
+      <circle class="cls-1" cx="7.9" cy="7.9" r="7.9"/>
+      <g>
+        <path class="cls-2" d="M7.9,12.18v-.89c1.18-.04,2.11-.53,2.76-1.52.43-.65.58-1.38.49-2.16-.18-1.6-1.57-2.9-3.3-2.88-1.71.03-2.93,1.31-3.17,2.68h1.73c-.7.8-1.39,1.59-2.08,2.38-.69-.79-1.38-1.58-2.08-2.38h1.52c.03-.15.05-.29.09-.43.29-1.11.93-1.97,1.92-2.57.47-.29.99-.47,1.53-.54,1.18-.15,2.24.13,3.18.86.76.6,1.25,1.38,1.47,2.32.05.22.08.45.1.68,0,.02,0,.04,0,.06v.4s0,.04,0,.06c-.01.23-.04.45-.1.68-.25,1.05-.82,1.88-1.71,2.5-.57.4-1.2.63-1.89.7-.11.01-.21.02-.32.03h-.15Z"/>
+        <polygon class="cls-2" points="10.15 8.5 7.53 8.5 7.53 5.71 8.31 5.71 8.31 7.72 10.15 7.72 10.15 8.5"/>
+      </g>
+    </g>
+  </g>
+</svg>
