@@ -27,13 +27,13 @@ class NavigationItem extends StatelessWidget {
         }
       },
       child: SizedBox(
-        width: 60.w,
-        height: 50.h,
+        width: 65.w,
+        height: 52.h,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SvgPicture.asset(image, height: Dimensions.heightIconMedium),
-            Text(text, style: TextStyles.whiteNavigation)
+            SvgPicture.asset(image, height: Dimensions.hIconNav),
+            Text(text, style: TextStyles.whiteNavigationStyle),
           ],
         ),
       ),

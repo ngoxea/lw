@@ -29,8 +29,8 @@ class HyperlinkImage extends StatelessWidget {
       },
       child: SvgPicture.asset(
         image, 
-        width: width ?? Dimensions.widthIconSmall, 
-        height: height ?? Dimensions.heightIconSmall,
+        width: width ?? Dimensions.wIconTool, 
+        height: height ?? Dimensions.hIconTool,
       ),
     );
   }

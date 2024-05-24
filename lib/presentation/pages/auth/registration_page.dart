@@ -3,10 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lw/presentation/pages/auth/widgets/registration_form.dart';
 import 'package:lw/presentation/widgets/custom_welcom.dart';
 import 'package:lw/presentation/widgets/hyperlink_text.dart';
-import 'package:lw/presentation/widgets/custom_text.dart';
 import 'package:lw/presentation/widgets/lang_box.dart';
 import 'package:lw/routes.dart';
-import 'package:lw/utils/color_palette.dart';
 import 'package:lw/utils/dimensions.dart';
 import 'package:lw/utils/text_styles.dart';
 
@@ -21,57 +19,57 @@ class _RegistrationPageState extends State<RegistrationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorPalette.lightBackgroundColor,
       body: SingleChildScrollView(
-        child: DefaultTextStyle(       
-          style: TextStyles.blueBodyMedium,
-          child: Column(
-            children: [
-              CustomWelcome(
-                height: 230.h,
-                padding: 72.h,
-                logoWidth: 185.w,
-                logoHeight: 130.h,
-                toolWidget: Positioned(
-                  top: 50.h,
-                  right: 24.w, 
-                  child: const LangBox()
-                ),
+        child: Column(
+          children: [
+            CustomWelcome(
+              size: WelcomeSizes.small,
+              toolWidget: Positioned(
+                top: Dimensions.yBezel,
+                right: Dimensions.xBezel, 
+                child: const LangBox()
               ),
-              SizedBox(height: Dimensions.heightMedium),
-              Text(
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                top: Dimensions.yMedium,
+                bottom: Dimensions.ySmall,
+              ),
+              child: Text(
                 'ĐĂNG KÝ THÀNH VIÊN NGAY', 
-                style: TextStyles.blueHeadingMedium
+                style: TextStyles.blueBodyMedium400,
               ),
-              SizedBox(height: Dimensions.heightSmall),
-              Padding(
-                padding: EdgeInsets.only(left: 24.w, right: 24.w),
-                child: CustomText(
-                  text: 'Để khám phá trọn vẹn những tính năng và thông tin hấp dẫn của app Love World',
-                  textAlign: TextAlign.center,
-                  textStyle: TextStyles.bodySmall,
-                  maxLines: 2,
-                )
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                left: Dimensions.xBezel,
+                right: Dimensions.xBezel,
+                bottom: Dimensions.yMedium,
               ),
-              SizedBox(height: Dimensions.heightMedium),
-              SizedBox(
-                width: 310.w,
-                child: Column(
-                  children: [
-                    const RegistrationForm(),
-                    SizedBox(height: 32.h),
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        CustomText(text: 'Bạn đã có tài khoản? '),
-                        HyperlinkText(hintText: 'Đăng nhập', routeName: Routes.login),
-                      ],
-                    ),
-                  ],
-                ),
+              child: Text(
+                'Để khám phá trọn vẹn những tính năng và thông tin hấp dẫn của app Love World',         
+                style: TextStyles.bodySmall,
+                textAlign: TextAlign.center,
+                maxLines: 2,
               )
-            ],
-          ),
+            ),
+            SizedBox(
+              width: Dimensions.wAuthForm,
+              child: Column(
+                children: [
+                  const RegistrationForm(),
+                  SizedBox(height: 32.h),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('Bạn đã có tài khoản? ', style: TextStyles.bodyMedium),
+                      const HyperlinkText(hintText: 'Đăng nhập', routeName: Routes.login),
+                    ],
+                  ),
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );

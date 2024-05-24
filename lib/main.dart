@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lw/presentation/pages/auth/login_page.dart';
-import 'package:lw/presentation/pages/welcome/welcome_page.dart';
 import 'package:lw/routes.dart';
 
 void main() {
@@ -27,7 +26,7 @@ class MyApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         routes: Routes.getRoutes(),
-        home: const WelcomePage(),
+        home: const LoginPage(),
       ),
     );
   }

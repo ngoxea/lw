@@ -1,32 +1,42 @@
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Dimensions {
-  // Heights
-  static double heightSmall  = 8.h;      
-  static double heightMedium = 16.h; 
-  static double heightLarge  = 24.h;    
+  // Spacing (x: horizontal, y: vertical)
+  static final double xSmall  = 8.w;
+  static final double xMedium = 16.w;
+  static final double xLarge  = 24.w;
+
+  static final double ySmall  = 8.w;
+  static final double yMedium = 16.w;
+  static final double yLarge  = 24.w;
+
+  static final double xBezel = 24.w;
+  static final double yBezel = 50.h;
+
+  static final double xBetweenIcons = 10.w;
+
+  static final double xBetweenInputs = 10.w;
+  static final double yBetweenInputs = 10.h;
   
-  static double heightBetweenInput = 10.h;
-
-  static double heightIconSmall = 20.h;
-  static double heightIconMedium = 32.h;
-
-  static double heightButton = 50.h;
-  static double heightScreen = 855.h;
-
-  // Widths
-  static double widthSmall  = 8.w; 
-  static double widthMedium = 16.w;      
-  static double widthLarge  = 24.w;
-
-  static double widthBetweenIcon = 10.h;
-
-  static double widthIconSmall = 30.h;
-  static double widthScreen = 440.w;   
+  // Sizing (w: width, h: height)
+  static final double wScreen = 440.w;
+  static final double hScreen = 855.h;
   
+  static final double hIconNav = 32.h;
+
+  static final double wIconTool = 30.h;
+  static final double hIconTool = 20.h;
+  
+  static final double hCustomButton = 50.h;
+  static final double hCustomInput = 50.h;
+
+  static final double wAuthButton = 130.w;
+  static final double hAuthButton = 35.h;
+
+  static final double wAuthForm = 308.h; 
 
   // Radius
-  static double radiusSmall = 10.r;
-  static double radiusMedium = 10.r;
-  static double radiusLarge = 24.r;
+  static double rSmall  = 8.r;
+  static double rMedium = 16.r;
+  static double rLarge  = 24.r;
 }

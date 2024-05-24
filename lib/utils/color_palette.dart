@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ColorPalette {
   // Basic neutral colors 
   static const Color neutralGrayColor = Color(0xFFBDBDBD); 
-  static const Color neutralWhiteColor = Color(0xFFF5F5F5); 
+  static const Color neutralWhiteColor = Color(0xFFFFFFFF); 
   static const Color neutralBlackColor = Color(0xFF212121);
 
   // Light mode colors
@@ -14,7 +14,4 @@ class ColorPalette {
   static const Color lightSuccessColor = Color(0xFF4CAF50); 
   static const Color lightWarningColor = Color(0xFFFF9800);
   static const Color lightErrorColor = Color(0xFFF44336); 
-
-  static const Color lightTextColor = neutralBlackColor;
-  static const Color lightBackgroundColor = neutralWhiteColor;
 }

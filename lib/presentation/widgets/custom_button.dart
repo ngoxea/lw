@@ -17,6 +17,8 @@ class CustomButton extends StatelessWidget {
   final double? width;
   final double? height;
 
+  final Function()? callback;
+
   const CustomButton({
     super.key,
     this.text = 'Custom Button',
@@ -27,30 +29,29 @@ class CustomButton extends StatelessWidget {
     this.borderRadius,
     this.width,
     this.height,
+    this.callback
   });
 
   @override
   Widget build(BuildContext context) {
       return InkWell(
-      onTap: () { 
-        print('Tap CustomButton: $text');   
-      },
+      onTap: callback ?? () { print('Tap CustomButton: $text!');},
       child: Stack(
         alignment: Alignment.center,
         children: [
           if (backgroundAsset.isEmpty)
           Container(
             width: width,
-            height: height ?? Dimensions.heightButton,
+            height: height ?? Dimensions.hCustomButton,
             decoration: BoxDecoration(
               color: backgroundColor ?? ColorPalette.neutralGrayColor,
               border: Border.all(color: borderColor ?? ColorPalette.neutralGrayColor),
-              borderRadius: BorderRadius.circular(borderRadius ?? Dimensions.radiusSmall),
+              borderRadius: BorderRadius.circular(borderRadius ?? Dimensions.rSmall),
             ),
           ),
           if (backgroundAsset.isNotEmpty)
           ClipRRect(
-            borderRadius: BorderRadius.circular(borderRadius ?? Dimensions.radiusSmall),
+            borderRadius: BorderRadius.circular(borderRadius ?? Dimensions.rSmall),
             child: SvgPicture.asset(
               backgroundAsset, 
               fit: BoxFit.cover,

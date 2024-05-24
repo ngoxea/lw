@@ -3,37 +3,28 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lw/utils/dimensions.dart';
 
+enum WelcomeSizes { small, medium, large }
+
 class CustomWelcome extends StatelessWidget {
-  final double? width;
-  final double? height;
-  final double? padding;
-
-  final double? logoWidth;
-  final double? logoHeight;
-
+  final WelcomeSizes size;
   final Widget? toolWidget;
   final Widget? textWidget;
-  final Widget? menuWidget;
+  final Widget? navWidget;
 
   const CustomWelcome({
     super.key, 
-    this.width,
-    this.height,
-    this.padding,
-    this.logoWidth,
-    this.logoHeight,
+    this.size = WelcomeSizes.large,
     this.toolWidget,
     this.textWidget,
-    this.menuWidget,
+    this.navWidget,
   });
 
   @override
   Widget build(BuildContext context) {
-    final double currentWidget = width ?? Dimensions.widthScreen;
-    final double currentHeight = height ?? Dimensions.heightScreen;
+    final sizeValues = _getSizeValues(size);
     return Container(
-      width: currentWidget,
-      height: currentHeight,
+      width: Dimensions.wScreen,
+      height: sizeValues['height']!,
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/images/asset5@4x.png'),
@@ -51,31 +42,58 @@ class CustomWelcome extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: padding ?? 160.h,
-            width: currentWidget,
+            top: sizeValues['logoTop']!,
+            width: Dimensions.wScreen,
             child: Center(
               child: SvgPicture.asset(
                 'assets/icons/asset159@4x1.svg', 
-                width: logoWidth ?? 260.w,
-                height: logoHeight ?? 185.h,
+                width: sizeValues['logoWidth']!,
+                height: sizeValues['logoHeight']!,
               ),
             ),
           ),
-          if (currentHeight > Dimensions.heightScreen / 2)
-          Positioned(
-            right: 0,
-            bottom: 0,
-            child: SvgPicture.asset(
-              'assets/icons/asset166@4x1.svg', 
-              width: 350.w,
-              height: 480.h,
+          if (sizeValues['height']! > Dimensions.hScreen / 2)
+            Positioned(
+              right: 0,
+              bottom: 0,
+              child: SvgPicture.asset(
+                'assets/icons/asset166@4x1.svg', 
+                width: 350.w,
+                height: 480.h,
+              ),
             ),
-          ),
-          if (null != toolWidget) toolWidget!,
-          if (null != textWidget) textWidget!,
-          if (null != menuWidget) menuWidget!,
+          if (navWidget != null) navWidget!,
+          if (toolWidget != null) toolWidget!,
+          if (textWidget != null) textWidget!,
         ],
       ),
     );
+  }
+
+  Map<String, double> _getSizeValues(WelcomeSizes size) {
+    switch (size) {
+      case WelcomeSizes.medium:
+        return {
+          'height': 378.h,
+          'logoTop': 92.h,
+          'logoWidth': 264.w,
+          'logoHeight': 184.h,
+        };
+      case WelcomeSizes.large:
+        return {
+          'height': Dimensions.hScreen,
+          'logoTop': 160.h,
+          'logoWidth': 260.w,
+          'logoHeight': 185.h,
+        };
+      case WelcomeSizes.small:
+      default:
+        return {
+          'height': 230.h,
+          'logoTop': 72.h,
+          'logoWidth': 185.w,
+          'logoHeight': 130.h,
+        };
+    }
   }
 }

@@ -16,9 +16,9 @@ class WelcomePage extends StatelessWidget {
     return Scaffold(
       body: CustomWelcome(
         toolWidget: Positioned(
-          top: 50.h,
-          left: 24.w,
-          right: 24.w,
+          top: Dimensions.yBezel,
+          left: Dimensions.xBezel,
+          right: Dimensions.xBezel,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [ 
@@ -26,7 +26,7 @@ class WelcomePage extends StatelessWidget {
               Wrap(
                 children: [
                   const LangBox(),
-                  SizedBox(width: Dimensions.widthBetweenIcon),
+                  SizedBox(width: Dimensions.xBetweenIcons),
                   HyperlinkImage(
                     routeName: '',
                     image: 'assets/icons/asset167@4x1.svg',
@@ -39,7 +39,7 @@ class WelcomePage extends StatelessWidget {
         ),
         textWidget: Positioned(
           bottom: 260.h,
-          width: Dimensions.widthScreen,
+          width: Dimensions.wScreen,
           child: Center(
             child: Column(
               children: [
@@ -47,26 +47,21 @@ class WelcomePage extends StatelessWidget {
                   'CHÀO MỪNG BẠN\nĐẾN VỚI GIA ĐÌNH',
                   maxLines: 2,
                   textAlign: TextAlign.center,
-                  style: TextStyles.whiteWelcom,
+                  style: TextStyles.whiteWelcomeStyle,
                 ),
                 Text(
                   'LOVE WORLD',
-                  maxLines: 2,
                   textAlign: TextAlign.center,
-                  style: TextStyles.baseRoboto.copyWith(
-                    color: ColorPalette.neutralWhiteColor,
-                    fontSize: 42.sp,
-                    fontWeight: FontWeight.w500,
-                  ),
+                  style: TextStyles.whiteWelcomeStyle500,
                 ),
               ]
             ),
           ),
         ),
-        menuWidget: Positioned(
+        navWidget: Positioned(
           bottom: 0,
-          width: Dimensions.widthScreen,
-          child: CustomNavigationBar(),
+          width: Dimensions.wScreen,
+          child: const CustomNavigationBar(),
         )
       ),
     );

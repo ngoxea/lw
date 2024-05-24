@@ -14,17 +14,17 @@ class LangBox extends StatelessWidget {
           onTap: () { print('Tap LangBox!'); },
           child: SvgPicture.asset(
             'assets/icons/asset160@4x1.svg',
-            width: Dimensions.heightIconSmall,
+            width: Dimensions.hIconTool,
             height: 22.h,
           ),
         ),
-        SizedBox(width: Dimensions.widthBetweenIcon),
+        SizedBox(width: Dimensions.xBetweenIcons),
         InkWell(
           onTap: () { print('Tap LangBox!'); },
           child: SvgPicture.asset(
             'assets/icons/asset161@4x1.svg',
-            width: Dimensions.heightIconSmall,
-            height: Dimensions.heightIconSmall,
+            width: Dimensions.wIconTool,
+            height: Dimensions.hIconTool,
           ),
         ),
       ],

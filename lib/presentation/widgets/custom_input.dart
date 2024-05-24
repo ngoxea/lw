@@ -36,25 +36,25 @@ class CustomInput extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: width,
-      height: height ?? Dimensions.heightButton,
+      height: height ?? Dimensions.hCustomInput,
       child: TextField(
-        textAlign: textAlign ?? TextAlign.center,
+        textAlign: textAlign ?? TextAlign.left,
         decoration: InputDecoration(   
           hintText: hintText,
           hintStyle: hintStyle ?? TextStyles.blueBodyMedium,
           border: const OutlineInputBorder(),
           enabledBorder: OutlineInputBorder(
             borderSide: const BorderSide(color: ColorPalette.lightPrimaryColor),
-            borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
+            borderRadius: BorderRadius.circular(borderRadius ?? Dimensions.rSmall),
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: const BorderSide(color: ColorPalette.lightPrimaryColor),
-            borderRadius: BorderRadius.circular(Dimensions.radiusSmall)
+            borderRadius: BorderRadius.circular(borderRadius ?? Dimensions.rSmall)
           ),
           isDense: false,
           contentPadding: padding ?? EdgeInsets.symmetric(
-            horizontal: Dimensions.heightMedium,
-            vertical: Dimensions.heightSmall,
+            horizontal: Dimensions.xMedium,
+            vertical: Dimensions.ySmall,
           ),
           suffixIconConstraints: BoxConstraints(maxWidth: 40.w, maxHeight: 24.h),
           suffixIcon: suffixIcon 
